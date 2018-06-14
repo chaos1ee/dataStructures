@@ -2,9 +2,13 @@
 
 栈是一种遵循<b>后进先出（LIFO）</b>原则的有序集合。新添加或待删除的元素都保存在栈的同一端，称作栈顶，另一端就叫做栈底。在栈里，新元素都靠近栈顶，旧元素都靠近栈底。
 
+栈结构示意图：
+
 ![stack](../image/stack.jpg)
 
-## 创建栈
+## 分步实现
+
+### 创建栈
 
 先声明一个类：
 
@@ -31,42 +35,42 @@ let items = [];
 
 ![stack](../image/stack.png)
 
-## 给栈添加元素
+### 给栈添加元素
 ```JavaScript
 this.push = function(element){
   items.push(element);
 }
 ```
 
-## 从栈中移除元素
+### 从栈中移除元素
 ```javascript
 this.pop = function() {
   return items.pop();
 }
 ```
 
-## 查看栈顶元素
+### 查看栈顶元素
 ```javascript
 this.peek = function() {
   return items[items.length - 1];
 }
 ```
 
-## 检查栈是否为空
+### 检查栈是否为空
 ```javascript
 this.isEmpty = function() {
   return items.length === 0;
 }
 ```
 
-## 获取栈的长度
+### 获取栈的长度
 ```javascript
 this.size = function() {
   return items.length;
 }
 ```
 
-## 完整的代码实现（构造函数模式）：
+## 完整的实现代码（构造函数模式）：
 
 使用了作用域安全的构造函数模式，防止污染全局空间。
 
