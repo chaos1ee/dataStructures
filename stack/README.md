@@ -27,6 +27,10 @@ let items = [];
 * clear(): 移除栈中的所有元素。
 * size(): 返回栈里的元素个数。
 
+栈操作示意图：
+
+![stack](../image/stack.png)
+
 ## 给栈添加元素
 ```JavaScript
 this.push = function(element){
