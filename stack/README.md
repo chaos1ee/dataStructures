@@ -62,30 +62,36 @@ this.size = function() {
 }
 ```
 
-完整的代码实现（构造函数模式）：
+## 完整的代码实现（构造函数模式）：
+
+使用了作用域安全的构造函数模式，防止污染全局空间。
 
 ```javascript
 function Stack() {
-  this.items = [];
-  
-  this.push = function(element){
-    this.items.push(element);
-  }
+  if(this instanceof Stack) {
+    this.items = [];
+    
+    this.push = function(element){
+      this.items.push(element);
+    }
 
-  this.pop = function() {
-    return this.items.pop();
-  }
+    this.pop = function() {
+      return this.items.pop();
+    }
 
-  this.peek = function() {
-    return this.items[this.items.length - 1]
-  }
+    this.peek = function() {
+      return this.items[this.items.length - 1]
+    }
 
-  this.isEmpty = function() {
-    return this.items.length === 0;
-  }
+    this.isEmpty = function() {
+      return this.items.length === 0;
+    }
 
-  this.size = function() {
-    return this.items.length;
+    this.size = function() {
+      return this.items.length;
+    }
+  } else {
+    return new Stack();
   }
 }
 ```
