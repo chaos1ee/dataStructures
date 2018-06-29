@@ -18,6 +18,6 @@ class Stack {
   }
 
   size() {
-    return items.length;
+    return this.items.length;
   }
 }

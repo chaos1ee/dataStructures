@@ -14,10 +14,10 @@ class Stack {
   }
 
   isEmpty() {
-    return items.length === 0;
+    return this.items.length === 0;
   }
 
   size() {
-    return items.length;
+    return this.items.length;
   }
 }

@@ -6,18 +6,18 @@ class Stack {
   }
 
   pop() {
-    return items.pop();
+    return this.items.pop();
   }
 
   peek() {
-    return items[this.items.length - 1];
+    return this.items[this.items.length - 1];
   }
 
   isEmpty() {
-    return items.length === 0;
+    return this.items.length === 0;
   }
 
   size() {
-    return items.length;
+    return this.items.length;
   }
 }
